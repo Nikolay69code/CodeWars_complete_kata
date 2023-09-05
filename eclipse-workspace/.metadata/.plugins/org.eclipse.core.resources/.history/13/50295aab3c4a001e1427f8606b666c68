@@ -1,0 +1,42 @@
+package warrior;
+import java.util.*;
+// Задания взяты с сайта https://postupi.online/filesolym_standart.php?id=8369&is_preview=1
+public class Olimpiada {
+
+	//Задача 1. Самолёт
+	public static int plane (int seats) {
+		if (seats > 10) {	
+			int otv = 2;
+			int seatsW = seats - 6;
+			otv += seatsW / 4 - 1;
+			if (seatsW / 4 * 4 != seatsW ) {
+				otv++;
+				return otv;
+			}
+		}
+		else {
+			if (seats < 7) {
+				return 1;
+			}
+			if (seats <= 10 &&  seats >= 7) {
+				return 2;
+			}
+		}
+		return 0;
+	}
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList <String> massive = new ArrayList<>();
+		massive.add("df");
+		massive.add("as");
+		massive.add("fh");
+		ListIterator<String>iter = massive.listIterator(); 
+		while(iter.hasNext()) {
+			System.out.println(iter.next());
+		}
+	
+	}
+
+}
